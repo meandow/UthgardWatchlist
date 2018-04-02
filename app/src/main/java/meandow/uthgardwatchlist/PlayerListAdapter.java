@@ -19,7 +19,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Deprecated
 public class PlayerListAdapter extends ArrayAdapter<Player> {
     private List<Player> mZones;
     private int mResourceId = 0;

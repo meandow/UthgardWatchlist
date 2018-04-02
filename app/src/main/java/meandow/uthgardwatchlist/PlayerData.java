@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
- class PlayerData {
+class PlayerData {
     public List<Player> Players;
     public final String PrefKey = "PlayerData";
     public final String PlayerKey = "PlayerData.Players";
@@ -59,12 +59,17 @@ import java.util.List;
         return mInstance;
     }
 
-    public void addPlayer(Player playur){
+    public void addPlayer(Player playur) {
         Players.add(playur);
     }
-    private List<Player> getDefaultPlayers(){
+
+    public void removePlayer(int position) {
+        Players.remove(position);
+    }
+
+    private List<Player> getDefaultPlayers() {
         List<Player> players = new ArrayList<>();
-        Player p1 = new Player("Meandaw","Bleach Cabal","Saracen","Cabalist","ALBION",0,22983,50,24);
+        Player p1 = new Player("Meandaw", "Bleach Cabal", "Saracen", "Cabalist", "ALBION", 0, 22983, 50, 24);
         players.add(p1);
         return players;
     }
